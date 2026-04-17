@@ -127,7 +127,7 @@ var SECTIONS = [
         title: 'The Lakota & the Great Plains',
         year: 'Pre-1860s',
         images: [
-            { src: '2308991_00100883.tif.jpg', alt: 'Portrait of a Lakota man in traditional dress', caption: 'A Lakota man in traditional clothing, late 19th century' }
+            { src: '2308991_00100883.tif.jpg', alt: 'Photograph of Rain-in-the-Face, Dakota Chief, seated, three-quarter length, taken by D. F. Barry between 1880 and 1889', caption: 'Rain-in-the-Face, Dakota Chief, seated, 3/4 length. Photograph by D. F. Barry (David Francis Barry, 1854\u20131934), 1880\u20131889. Call Number B-883.' }
         ],
         exploreLinks: [
             {
