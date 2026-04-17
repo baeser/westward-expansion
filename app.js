@@ -557,25 +557,33 @@ function render() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-// Welcome screen with name entry
+// Welcome screen with name entry — cinematic dark title screen
 function renderWelcome(container) {
     container.innerHTML =
-        '<div class="welcome-screen">' +
-            '<h1 class="welcome-title">Westward Expansion &amp;<br>the Battle of Little Bighorn</h1>' +
-            '<p class="welcome-subtitle">An Interactive History Simulation</p>' +
-            '<p class="welcome-description">' +
-                'In this simulation you will explore the history of American westward expansion ' +
-                'and the events leading to the Battle of Little Bighorn in 1876. You will read primary ' +
-                'source documents, analyze different perspectives, and answer questions along the way.' +
+        '<div class="title-screen">' +
+            '<div class="title-eyebrow">Classroom Simulation</div>' +
+            '<h1 class="title-main">Westward<br>Expansion</h1>' +
+            '<div class="title-subtitle">1845 \u2013 1890</div>' +
+            '<p class="title-intro">' +
+                'For half a century, the United States pushed westward across the ' +
+                'Great Plains \u2014 driven by the belief that expansion was a ' +
+                '<em>manifest destiny</em>. Railroads, miners, and settlers ' +
+                'streamed into lands that had been home to Native nations for ' +
+                'thousands of years.' +
+                '<br><br>' +
+                'In this simulation, you will trace the path from <em>Manifest Destiny</em> ' +
+                'to the <em>Battle of Little Bighorn</em>. You will read the words of those ' +
+                'who lived it, examine the photographs and documents they left behind, ' +
+                'and make your own judgments about what happened and why.' +
+                '<br><br>' +
+                '<strong>The people in this story were real. The events happened. ' +
+                'The questions are still being asked.</strong>' +
             '</p>' +
-            '<p class="welcome-description">' +
-                'Your responses will be saved and can be exported as a PDF at the end.' +
-            '</p>' +
-            '<div class="name-entry">' +
-                '<label for="student-name">Enter your name to begin:</label>' +
+            '<div class="title-name-entry">' +
+                '<label for="student-name">Enter your name to begin</label>' +
                 '<input type="text" id="student-name" placeholder="First and Last Name" ' +
                        'maxlength="60" autocomplete="off">' +
-                '<button class="btn btn-primary" onclick="startSimulation()">Begin Simulation</button>' +
+                '<button class="btn-start" onclick="startSimulation()">Begin Simulation</button>' +
             '</div>' +
         '</div>';
 
@@ -592,11 +600,12 @@ function renderSection(container, section) {
     var state = answers[section.id] || {};
     var html = '';
 
-    // ---- Chapter header ----
+    // ---- Chapter header (editorial: location eyebrow, date, title) ----
     html += '<div class="section-card">';
     html += '<div class="chapter-header">';
-    html += '<span class="chapter-label">Chapter ' + section.chapter + ' &mdash; ' + section.year + '</span>';
-    html += '<h1 class="chapter-title">' + section.title + '</h1>';
+    html += '<div class="scene-location">Chapter ' + section.chapter + '</div>';
+    html += '<div class="scene-date">' + section.year + '</div>';
+    html += '<h1 class="scene-title">' + section.title + '</h1>';
     html += '</div>';
 
     // ---- Narrative ----
