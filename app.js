@@ -55,6 +55,7 @@ var SECTIONS = [
         title: 'Manifest Destiny & Westward Expansion',
         year: '1845\u20131870',
         images: [
+            { src: 'americanprogress.png', alt: 'John Gast, American Progress (1872) \u2014 allegorical painting of Manifest Destiny showing the figure Columbia leading settlers westward', caption: 'John Gast, \u201cAmerican Progress\u201d (1872) \u2014 a popular allegory of Manifest Destiny. Columbia carries a school book and telegraph wire as she leads settlers, stagecoaches, and railroads westward, while Native Americans and bison flee into the darkness.' },
             { src: 'expansion-map.png', alt: 'Map of US territorial expansion from 1803 to 1867', caption: 'Map of US territorial expansion, 1803\u20131867' }
         ],
         narrative:
