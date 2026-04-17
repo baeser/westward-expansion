@@ -68,7 +68,9 @@ var SECTIONS = [
         ],
         narrative:
             '<p>After the Civil War ended in 1865, Americans increasingly looked westward. ' +
-            'The idea of <strong>\u201cManifest Destiny\u201d</strong> \u2014 the belief that the ' +
+            'The idea of <strong class="vocab-term" tabindex="0" ' +
+                'data-def="A 19th-century belief that the United States was destined by God to expand across North America from coast to coast. The phrase was coined by journalist John L. O\u2019Sullivan in 1845.">' +
+                '\u201cManifest Destiny\u201d</strong> \u2014 the belief that the ' +
             'United States was destined by God to expand across the entire North American ' +
             'continent \u2014 drove thousands of settlers, miners, and railroad workers into ' +
             'the Great Plains and beyond.</p>' +
@@ -142,10 +144,21 @@ var SECTIONS = [
             }
         ],
         narrative:
-            '<p>For centuries before American settlers arrived, the <strong>Lakota (Western Sioux)</strong>, ' +
-            '<strong>Northern Cheyenne</strong>, and <strong>Arapaho</strong> peoples lived on the Great Plains. ' +
+            '<p>For centuries before American settlers arrived, the ' +
+            '<strong class="vocab-term" tabindex="0" ' +
+                'data-def="A Native nation of the Northern Plains, part of the larger O\u010dh\u00e9thi \u0160ak\u00f3wi\u014b (Seven Council Fires) alliance. Known for horsemanship, buffalo-hunting culture, and fierce resistance to US expansion.">' +
+                'Lakota (Western Sioux)</strong>, ' +
+            '<strong class="vocab-term" tabindex="0" ' +
+                'data-def="A Plains nation closely allied with the Lakota. Fought alongside them in Red Cloud\u2019s War (1866\u201368) and at the Battle of Little Bighorn (1876).">' +
+                'Northern Cheyenne</strong>, and ' +
+            '<strong class="vocab-term" tabindex="0" ' +
+                'data-def="A Plains nation that lived alongside the Cheyenne. Allied with the Lakota and Cheyenne in resisting US expansion; also fought at Little Bighorn.">' +
+                'Arapaho</strong> peoples lived on the Great Plains. ' +
             'They were skilled hunters, diplomats, and warriors with complex societies and governments.</p>' +
-            '<p>The <strong>Black Hills</strong> of present-day South Dakota \u2014 known to the Lakota as ' +
+            '<p>The ' +
+            '<strong class="vocab-term" tabindex="0" ' +
+                'data-def="A small mountain range in present-day western South Dakota. Sacred to the Lakota as \u201cPaha Sapa\u201d \u2014 the heart of everything that is. Site of the 1874 gold discovery that triggered the Great Sioux War.">' +
+                'Black Hills</strong> of present-day South Dakota \u2014 known to the Lakota as ' +
             '<em>Paha Sapa</em> \u2014 held deep spiritual significance. The Lakota considered them the ' +
             '\u201cheart of everything that is,\u201d a sacred place for prayer, vision quests, and ceremony.</p>',
         primarySources: [
@@ -206,10 +219,19 @@ var SECTIONS = [
             { src: 'NMAI-280_001_001_P38087.jpg', alt: 'Portrait of a Lakota chief wearing a bone breastplate', caption: 'A Lakota leader, late 19th century (National Museum of the American Indian)' }
         ],
         narrative:
-            '<p>After years of conflict \u2014 including <strong>Red Cloud\u2019s War (1866\u20131868)</strong>, ' +
+            '<p>After years of conflict \u2014 including ' +
+            '<strong class="vocab-term" tabindex="0" ' +
+                'data-def="An 1866\u20131868 war named for Lakota leader Red Cloud. The Lakota, Cheyenne, and Arapaho forced the US to abandon forts along the Bozeman Trail \u2014 a rare Native military victory over the United States.">' +
+                'Red Cloud\u2019s War (1866\u20131868)</strong>, ' +
             'in which the Lakota successfully defended their territory \u2014 the US government sought peace. ' +
-            'The result was the <strong>Fort Laramie Treaty of 1868</strong>.</p>' +
-            '<p>The treaty established the <strong>Great Sioux Reservation</strong>, which included the sacred ' +
+            'The result was the ' +
+            '<strong class="vocab-term" tabindex="0" ' +
+                'data-def="A treaty that ended Red Cloud\u2019s War. The US recognized the Great Sioux Reservation \u2014 including the sacred Black Hills \u2014 as Lakota land \u201cforever.\u201d The US broke the treaty within eight years.">' +
+                'Fort Laramie Treaty of 1868</strong>.</p>' +
+            '<p>The treaty established the ' +
+            '<strong class="vocab-term" tabindex="0" ' +
+                'data-def="The large territory set aside for the Lakota Nation by the 1868 Fort Laramie Treaty. It included most of present-day western South Dakota, including the Black Hills.">' +
+                'Great Sioux Reservation</strong>, which included the sacred ' +
             'Black Hills, and guaranteed that this land would be set apart for the \u201cabsolute and undisturbed ' +
             'use and occupation\u201d of the Sioux. The US also agreed to close military forts along the Bozeman Trail.</p>' +
             '<p>This was a rare case of a Native nation winning a war against the United States and negotiating ' +
@@ -276,14 +298,23 @@ var SECTIONS = [
             { src: 'orig_519427_583532-scaled.jpg', alt: 'Custer\u2019s 1874 Black Hills expedition wagon train crossing the prairie', caption: 'Custer\u2019s 1874 expedition entering the Black Hills (photo by William Illingworth)' }
         ],
         narrative:
-            '<p>In 1874, Lieutenant Colonel <strong>George Armstrong Custer</strong> led a military ' +
+            '<p>In 1874, Lieutenant Colonel ' +
+            '<strong class="vocab-term" tabindex="0" ' +
+                'data-def="US Army lieutenant colonel (1839\u20131876). Civil War veteran. Led the 1874 expedition into the Black Hills that violated the Fort Laramie Treaty. Killed with his immediate command at the Battle of Little Bighorn.">' +
+                'George Armstrong Custer</strong> led a military ' +
             'expedition into the Black Hills \u2014 a <strong>direct violation of the Fort Laramie Treaty</strong>. ' +
             'When his geologists confirmed the presence of gold, newspapers spread the news across the country.</p>' +
             '<p>Thousands of miners flooded into the Black Hills illegally. Rather than removing the miners as the ' +
             'treaty required, the US government tried to <strong>buy the Black Hills</strong> from the Lakota. ' +
             'When the Lakota refused to sell their sacred land, the government issued an ultimatum: all Lakota bands ' +
             'must report to reservation agencies by <strong>January 31, 1876</strong>, or be considered \u201chostile.\u201d</p>' +
-            '<p>Many bands, including those led by <strong>Sitting Bull</strong> and <strong>Crazy Horse</strong>, ' +
+            '<p>Many bands, including those led by ' +
+            '<strong class="vocab-term" tabindex="0" ' +
+                'data-def="Hunkpapa Lakota spiritual and political leader (c. 1831\u20131890). Refused to sign treaties or move to a reservation. Performed the 1876 Sun Dance vision before the Battle of Little Bighorn.">' +
+                'Sitting Bull</strong> and ' +
+            '<strong class="vocab-term" tabindex="0" ' +
+                'data-def="Oglala Lakota war leader (c. 1840\u20131877). Led the mounted counterattack that destroyed Custer\u2019s immediate command at the Battle of Little Bighorn.">' +
+                'Crazy Horse</strong>, ' +
             'refused. They had not broken any treaty \u2014 the US had.</p>',
         primarySources: [
             {
@@ -350,14 +381,23 @@ var SECTIONS = [
         },
         narrative:
             '<p>By the spring of 1876, thousands of Lakota, Northern Cheyenne, and Arapaho people had gathered ' +
-            'in the valley of the <strong>Little Bighorn River</strong> (known to the Lakota as the <em>Greasy Grass</em>) ' +
+            'in the valley of the ' +
+            '<strong class="vocab-term" tabindex="0" ' +
+                'data-def="A river in present-day southeastern Montana. Known to the Lakota as the \u201cGreasy Grass.\u201d Site of the Battle of Little Bighorn, June 25\u201326, 1876.">' +
+                'Little Bighorn River</strong> (known to the Lakota as the <em>Greasy Grass</em>) ' +
             'in present-day Montana. They were led by respected leaders including <strong>Sitting Bull</strong> and ' +
             '<strong>Crazy Horse</strong>.</p>' +
-            '<p>Sitting Bull performed a <strong>Sun Dance</strong> \u2014 a sacred ceremony involving fasting and ' +
+            '<p>Sitting Bull performed a ' +
+            '<strong class="vocab-term" tabindex="0" ' +
+                'data-def="A sacred ceremony practiced by many Plains nations, involving days of fasting, prayer, and in some traditions personal sacrifice. Sitting Bull\u2019s 1876 Sun Dance produced a vision of soldiers \u201cfalling into camp.\u201d">' +
+                'Sun Dance</strong> \u2014 a sacred ceremony involving fasting and ' +
             'sacrifice \u2014 and experienced a powerful vision. He saw soldiers falling upside down into the Lakota camp, ' +
             'which he interpreted as a prophecy of victory.</p>' +
             '<p>Meanwhile, the US Army launched a three-pronged military campaign to force the Lakota and Cheyenne onto ' +
-            'reservations. Custer, commanding the <strong>7th Cavalry</strong>, was eager for glory. He had political ' +
+            'reservations. Custer, commanding the ' +
+            '<strong class="vocab-term" tabindex="0" ' +
+                'data-def="US Army cavalry regiment commanded by Custer. Lost more than 260 men at the Battle of Little Bighorn, including all five companies under Custer\u2019s direct command.">' +
+                '7th Cavalry</strong>, was eager for glory. He had political ' +
             'ambitions and saw a decisive military victory as his path forward.</p>',
         primarySources: [
             {
@@ -424,7 +464,10 @@ var SECTIONS = [
             '<strong>6,000\u20137,000 people</strong>, including an estimated <strong>1,500\u20132,000 warriors</strong> ' +
             'from the Lakota, Northern Cheyenne, and Arapaho nations.</p>' +
             '<p>Custer led about <strong>210 men</strong> directly toward the village. Warriors led by ' +
-            '<strong>Crazy Horse</strong> and <strong>Chief Gall</strong> counterattacked with overwhelming force. ' +
+            '<strong>Crazy Horse</strong> and ' +
+            '<strong class="vocab-term" tabindex="0" ' +
+                'data-def="Phiz\u00ed (c. 1840\u20131894). Hunkpapa Lakota war leader. Led part of the counterattack that destroyed Custer\u2019s immediate command at Little Bighorn, alongside Crazy Horse.">' +
+                'Chief Gall</strong> counterattacked with overwhelming force. ' +
             'Within roughly an hour, Custer and every soldier in his immediate command were killed. The other two ' +
             'groups under Major Reno and Captain Benteen survived but suffered heavy casualties.</p>' +
             '<p>It was the worst US Army defeat in the Plains Wars. The Lakota call it ' +

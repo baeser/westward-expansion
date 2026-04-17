@@ -320,6 +320,63 @@ body {
 }
 
 /* ==========================================================
+ * VOCAB TOOLTIPS — hover or tap a key term to see its definition
+ * Terms are marked with <span class="vocab-term" data-def="...">
+ * or on an existing <strong class="vocab-term" ...>.
+ * ========================================================== */
+
+.vocab-term {
+    border-bottom: 1px dashed var(--gold);
+    cursor: help;
+    position: relative;
+    /* Let the dashed underline sit slightly below the text */
+    text-underline-offset: 2px;
+}
+
+.vocab-term:focus { outline: none; }
+
+/* The pop-up bubble — centered below the term */
+.vocab-term:hover::after,
+.vocab-term:focus::after {
+    content: attr(data-def);
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 280px;
+    max-width: calc(100vw - 2rem);
+    padding: 0.7rem 0.9rem;
+    background: var(--blue);
+    color: #f4eedc;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-transform: none;
+    border-radius: 3px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+    z-index: 20;
+    white-space: normal;
+    pointer-events: none;
+}
+
+/* Small arrow pointing up toward the term */
+.vocab-term:hover::before,
+.vocab-term:focus::before {
+    content: '';
+    position: absolute;
+    top: calc(100% + 2px);
+    left: 50%;
+    transform: translateX(-50%);
+    border: 6px solid transparent;
+    border-bottom-color: var(--blue);
+    z-index: 21;
+    pointer-events: none;
+}
+
+/* ==========================================================
  * IMAGES — editorial photo frames with dark caption strip
  * Subtle grayscale/sepia tint to match historical feel
  * ========================================================== */
