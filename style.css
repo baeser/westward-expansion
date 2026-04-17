@@ -357,12 +357,15 @@ body {
 }
 
 /* ==========================================================
- * EXTERNAL VIDEO LINK (PBS, etc.)
+ * EXTERNAL VIDEO & EXPLORE LINKS (PBS, Native Land, etc.)
+ * Shared card style for external resources with an icon
  * ========================================================== */
 
-.video-link { margin: 1.75rem 0; }
+.video-link,
+.explore-link { margin: 1.75rem 0; }
 
-.video-link a {
+.video-link a,
+.explore-link a {
     display: flex;
     align-items: center;
     gap: 1rem;
@@ -374,12 +377,14 @@ body {
     transition: border-color 0.2s, background 0.2s;
 }
 
-.video-link a:hover {
+.video-link a:hover,
+.explore-link a:hover {
     border-color: var(--accent);
     background: #fff;
 }
 
-.video-play-icon {
+.video-play-icon,
+.explore-icon {
     flex: 0 0 48px;
     width: 48px;
     height: 48px;
@@ -390,8 +395,12 @@ body {
     color: #fff;
     border-radius: 50%;
     font-size: 1.1rem;
-    padding-left: 3px;   /* optical centering of play triangle */
 }
+
+/* Play triangle needs optical centering; globe SVG does not */
+.video-play-icon { padding-left: 3px; }
+
+.explore-icon svg { display: block; }
 
 .video-link-text {
     flex: 1;

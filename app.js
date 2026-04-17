@@ -121,6 +121,11 @@ var SECTIONS = [
         images: [
             { src: '2308991_00100883.tif.jpg', alt: 'Portrait of a Lakota man in traditional dress', caption: 'A Lakota man in traditional clothing, late 19th century' }
         ],
+        exploreLink: {
+            url: 'https://native-land.ca/maps/territories/',
+            title: 'Explore Native Territories \u2014 Native Land Digital',
+            description: 'Interactive map of Indigenous nations, languages, and treaties. Zoom to the northern Great Plains to see the territories of the Lakota, Cheyenne, Arapaho, and many others whose lands overlapped here long before US expansion.'
+        },
         narrative:
             '<p>For centuries before American settlers arrived, the <strong>Lakota (Western Sioux)</strong>, ' +
             '<strong>Northern Cheyenne</strong>, and <strong>Arapaho</strong> peoples lived on the Great Plains. ' +
@@ -645,6 +650,28 @@ function renderSection(container, section) {
         html += '<span class="video-link-text">';
         html += '<span class="video-link-title">' + section.videoLink.title + '</span>';
         html += '<span class="video-link-desc">' + section.videoLink.description + '</span>';
+        html += '</span>';
+        html += '</a>';
+        html += '</div>';
+    }
+
+    // ---- External explore link (Native Land Digital map, etc.) ----
+    if (section.exploreLink) {
+        html += '<div class="explore-link">';
+        html += '<a href="' + section.exploreLink.url + '" target="_blank" rel="noopener">';
+        html += '<span class="explore-icon" aria-hidden="true">';
+        // Inline SVG globe-with-meridians icon — avoids emoji inconsistency
+        html += '<svg viewBox="0 0 24 24" width="24" height="24" fill="none" ';
+        html += 'stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">';
+        html += '<circle cx="12" cy="12" r="10"/>';
+        html += '<path d="M2 12h20"/>';
+        html += '<path d="M12 2a15 15 0 0 1 0 20"/>';
+        html += '<path d="M12 2a15 15 0 0 0 0 20"/>';
+        html += '</svg>';
+        html += '</span>';
+        html += '<span class="video-link-text">';
+        html += '<span class="video-link-title">' + section.exploreLink.title + '</span>';
+        html += '<span class="video-link-desc">' + section.exploreLink.description + '</span>';
         html += '</span>';
         html += '</a>';
         html += '</div>';
