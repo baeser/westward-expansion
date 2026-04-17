@@ -26,6 +26,14 @@
  * To link an external video (PBS, etc.), add a videoLink property:
  *   videoLink: { url: 'https://...', title: 'title', description: 'short desc' }
  *
+ * To link one or more interactive resources (maps, timelines,
+ * archives, etc.), add an exploreLinks array:
+ *   exploreLinks: [
+ *       { url: 'https://...', title: 'title', description: 'short desc' },
+ *       { url: 'https://...', title: 'title', description: 'short desc' }
+ *   ]
+ * (a single `exploreLink` object also still works.)
+ *
  * ========================================================== */
 
 /* =====================
@@ -121,11 +129,18 @@ var SECTIONS = [
         images: [
             { src: '2308991_00100883.tif.jpg', alt: 'Portrait of a Lakota man in traditional dress', caption: 'A Lakota man in traditional clothing, late 19th century' }
         ],
-        exploreLink: {
-            url: 'https://native-land.ca/maps/territories/',
-            title: 'Explore Native Territories \u2014 Native Land Digital',
-            description: 'Interactive map of Indigenous nations, languages, and treaties. Zoom to the northern Great Plains to see the territories of the Lakota, Cheyenne, Arapaho, and many others whose lands overlapped here long before US expansion.'
-        },
+        exploreLinks: [
+            {
+                url: 'https://native-land.ca/maps/territories/',
+                title: 'Start Here \u2014 Native Territories in Michigan & the Great Lakes',
+                description: 'Before we travel west, find our home. The Great Lakes were \u2014 and are \u2014 home to the <strong>Anishinaabe</strong>: the Three Fires Confederacy of <strong>Ojibwe (Chippewa), Odawa (Ottawa),</strong> and <strong>Potawatomi</strong>, along with the <strong>Wyandot</strong> and <strong>Miami</strong>. Michigan has 12 federally recognized tribes today, with reservations from the Upper Peninsula down through the Lower Peninsula. Zoom to Michigan on the map and see whose land you live on.'
+            },
+            {
+                url: 'https://native-land.ca/maps/territories/',
+                title: 'Then Pan West \u2014 Native Territories of the Great Plains',
+                description: 'Now follow the story of this simulation. Pan the map west to the northern Great Plains to see the territories of the <strong>Lakota, Cheyenne, Arapaho</strong>, and many others whose lands overlapped long before US expansion.'
+            }
+        ],
         narrative:
             '<p>For centuries before American settlers arrived, the <strong>Lakota (Western Sioux)</strong>, ' +
             '<strong>Northern Cheyenne</strong>, and <strong>Arapaho</strong> peoples lived on the Great Plains. ' +
@@ -655,10 +670,14 @@ function renderSection(container, section) {
         html += '</div>';
     }
 
-    // ---- External explore link (Native Land Digital map, etc.) ----
-    if (section.exploreLink) {
+    // ---- External explore link(s) (Native Land Digital map, etc.) ----
+    // Accepts either a single `exploreLink` object or an array `exploreLinks`.
+    var exploreLinks = section.exploreLinks
+        || (section.exploreLink ? [section.exploreLink] : []);
+    for (var e = 0; e < exploreLinks.length; e++) {
+        var link = exploreLinks[e];
         html += '<div class="explore-link">';
-        html += '<a href="' + section.exploreLink.url + '" target="_blank" rel="noopener">';
+        html += '<a href="' + link.url + '" target="_blank" rel="noopener">';
         html += '<span class="explore-icon" aria-hidden="true">';
         // Inline SVG globe-with-meridians icon — avoids emoji inconsistency
         html += '<svg viewBox="0 0 24 24" width="24" height="24" fill="none" ';
@@ -670,8 +689,8 @@ function renderSection(container, section) {
         html += '</svg>';
         html += '</span>';
         html += '<span class="video-link-text">';
-        html += '<span class="video-link-title">' + section.exploreLink.title + '</span>';
-        html += '<span class="video-link-desc">' + section.exploreLink.description + '</span>';
+        html += '<span class="video-link-title">' + link.title + '</span>';
+        html += '<span class="video-link-desc">' + link.description + '</span>';
         html += '</span>';
         html += '</a>';
         html += '</div>';
