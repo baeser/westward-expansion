@@ -131,12 +131,12 @@ var SECTIONS = [
         ],
         exploreLinks: [
             {
-                url: 'https://native-land.ca/maps/territories/',
+                url: 'https://native-land.ca/maps/native-land',
                 title: 'Start Here \u2014 Native Territories in Michigan & the Great Lakes',
                 description: 'Before we travel west, find our home. The Great Lakes were \u2014 and are \u2014 home to the <strong>Anishinaabe</strong>: the Three Fires Confederacy of <strong>Ojibwe (Chippewa), Odawa (Ottawa),</strong> and <strong>Potawatomi</strong>, along with the <strong>Wyandot</strong> and <strong>Miami</strong>. Michigan has 12 federally recognized tribes today, with reservations from the Upper Peninsula down through the Lower Peninsula. Zoom to Michigan on the map and see whose land you live on.'
             },
             {
-                url: 'https://native-land.ca/maps/territories/',
+                url: 'https://native-land.ca/maps/native-land',
                 title: 'Then Pan West \u2014 Native Territories of the Great Plains',
                 description: 'Now follow the story of this simulation. Pan the map west to the northern Great Plains to see the territories of the <strong>Lakota, Cheyenne, Arapaho</strong>, and many others whose lands overlapped long before US expansion.'
             }
