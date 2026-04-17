@@ -573,8 +573,15 @@ function render() {
         updateProgress();
         renderSection(app, SECTIONS[currentIndex]);
     }
+    // Note: we intentionally do NOT scroll-to-top here. render() is also
+    // called on in-page interactions (selecting a choice, picking a check
+    // answer), and jumping to the top on every interaction is jarring.
+    // The navigation functions (startSimulation, nextSection, prevSection)
+    // handle scroll-to-top themselves when a new chapter actually loads.
+}
 
-    // Scroll to top when navigating to a new section
+// Helper — scroll the page to the top smoothly (used by navigation)
+function scrollPageToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
@@ -939,6 +946,7 @@ function startSimulation() {
     studentName = name;
     currentIndex = 0;
     render();
+    scrollPageToTop();
 }
 
 // Handle reflective choice selection (any answer is valid)
@@ -1026,6 +1034,7 @@ function saveWritten(sectionId) {
 function nextSection() {
     currentIndex++;
     render();
+    scrollPageToTop();
 }
 
 // Navigate to the previous section
@@ -1037,6 +1046,7 @@ function prevSection() {
         currentIndex--;
     }
     render();
+    scrollPageToTop();
 }
 
 // Save the final reflection text as the student types
